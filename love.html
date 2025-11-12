@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNTUK ALIKAH</title>
+    
+    <style>
+        /* Styling untuk Body */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center; /* Memposisikan item di tengah vertikal */
+            justify-content: center; /* Memposisikan item di tengah horizontal */
+            background: #0b1522; /* Warna latar belakang gelap */
+        }
+
+        /* Styling untuk Container Hati */
+        .heart {
+            width: 70px;
+            height: 70px;
+            background: #f20044; /* Warna merah hati */
+            position: relative;
+            transform: rotate(-45deg); /* Memutar 45 derajat untuk membuat bentuk hati */
+            box-shadow: -10px 10px 90px #f20044; /* Bayangan neon di sekitar hati */
+            animation: heart 0.6s linear infinite; /* Menerapkan animasi detak */
+        }
+
+        /* Pseudo-element sebelum (.heart) - Bagian kanan atas hati */
+        .heart::before {
+            content: '';
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            background: #f20044;
+            top: -50%; /* Pindahkan ke atas setengah dari ukuran */
+            border-radius: 50px;
+            box-shadow: -10px 10px 90px #f20044;
+        }
+
+        /* Pseudo-element setelah (.heart) - Bagian kiri atas hati */
+        .heart::after {
+            content: '';
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            background: #f20044;
+            right: -50%; /* Pindahkan ke kanan setengah dari ukuran */
+            border-radius: 50px;
+            box-shadow: 10px 10px 90px #f20044;
+        }
+
+        /* Styling untuk Teks 'I love you' */
+        .heart h1 {
+            color: aliceblue;
+            position: absolute;
+            /* Reset transform agar teks tidak ikut terputar -45deg */
+            transform: rotate(45deg); 
+            top: 100px;
+            left: -40px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+            /* Tambahkan efek glow/neon pada teks */
+            text-shadow: 0 0 10px aliceblue, 0 0 20px aliceblue, 0 0 30px #f20044, 0 0 40px #f20044;
+            font-style: oblique;
+        }
+
+        /* Keyframes untuk Animasi Detak Jantung */
+        @keyframes heart {
+            0% {
+                transform: rotate(-45deg) scale(1.0); /* Skala normal */
+            }
+            25% {
+                transform: rotate(-45deg) scale(1.07); /* Detak membesar */
+            }
+            50% {
+                transform: rotate(-45deg) scale(1.0); /* Skala normal */
+            }
+            75% {
+                transform: rotate(-45deg) scale(0.8); /* Detak mengecil */
+            }
+            100% {
+                transform: rotate(-45deg) scale(1.0); /* Kembali ke normal */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">
+        <h1>I LOVE YOU ALIKAH 🤭</h1>
+    </div>
+</body>
+</html>
